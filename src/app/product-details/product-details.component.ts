@@ -9,14 +9,14 @@ import { products } from '../products';
 })
 export class ProductDetailsComponent implements OnInit {
 
-  product;
+  clickedProduct;
 
   constructor(private route: ActivatedRoute) { }
 
   ngOnInit() {
     this.route.paramMap.subscribe(params =>
     {
-      this.product = products[params.get('productId')];
+      this.clickedProduct = products[params.get('productId')];
     });
   }
 

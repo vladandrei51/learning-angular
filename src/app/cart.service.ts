@@ -19,6 +19,14 @@ export class CartService {
     return this.items;
   }
 
+  getTotalPrice(){
+    var total = 0;
+    for (var i=0; i<this.items.length; i++) {
+      total+=this.items[i].price;
+    }
+    return total;
+  }
+
   constructor() { }
 
 }

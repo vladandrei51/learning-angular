@@ -1,0 +1,8 @@
+<h2> Cart: </h2>
+
+<div  *ngFor="let p of items; index as i">
+  <p> {{i+1}}: {{p.name}},  {{p.description}}, ${{p.price}} </p>
+</div>
+<p *ngIf="items.length > 0">
+  Total price: ${{total}}
+</p>
